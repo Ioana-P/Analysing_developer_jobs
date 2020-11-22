@@ -24,33 +24,33 @@ I scraped 498 job posts from Indeed.co.uk, searching for "software, developer" i
 * **Data** 
     Webscrapped job descriptions from Indeed.co.uk, searched for on the morning of 20th November, 2020. 500 Jobs originally stored. 2 were found to be unusable / duplicated. Thus I have 498 job descriptions, of which 243 state any kind of salary.
 * **Analysis** 
-    [states_salary](#https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/percent_jobs_state_salary.jpg)
+    ![states_salary](https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/percent_jobs_state_salary.jpg)
     Fig 1
     Barplots and boxplots illustrate salary distributions for London and non-London jobs. 
     
     1. Just over half of SE jobs do **not** advertise salary openly. 
 
     
-    [dist_all](#https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/distribution_annual.jpg)
+    ![dist_all](https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/distribution_annual.jpg)
     Fig 2 - distribution of salaries across the board
     
     
-    [dist_ldn](#https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/distribution_annual_London.jpg)
+    ![dist_ldn](https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/distribution_annual_London.jpg)
     Fig 3 - distribution of salaries for London
     
     2. The median job salary is £45k. The London median is 58K (mean of ~ 60k).
     
-    [locations](#https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/top_10_locs.jpg)
+    ![locations](https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/top_10_locs.jpg)
     Fig 4 - number of jobs by location
 
     3. Twice as many posted jobs are non-London than based in the capital. These jobs are however extremely spread out amongst many different locations. Cambridge, Reading, Birmingham and Oxford are the following cities in terms of number of jobs posted.
     
-    [title_ngrams](#https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/title_uni_and_bigrams.jpg)
+    ![title_ngrams](https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/title_uni_and_bigrams.jpg)
     Fig 5 -  terms and bigrams across job titles
     
     4. Less than 1 in 10 jobs are advertising with a programming language directly in their title (e.g. "Python developer"). About 10-20% of roles advertise with level of seniority directly in the title ("senior" vs "junior") and less than 10% directly require a university graduate (at least, going by title). 
     
-    [prog_langs](#https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/programming_languages.jpg)
+    ![prog_langs](https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/programming_languages.jpg)
     Fig 6 - top programming languages
     
     5. The 3 languages in greatest demand (both in terms of overall, total frequency - i.e. counting two mentions in one post as two - as single mentions) are JavaScript (and variants such as CoffeeScript and TypeScript), Python and Java. 
