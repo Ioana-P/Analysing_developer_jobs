@@ -12,17 +12,17 @@ I scraped 498 job posts from Indeed.co.uk, searching for "software, developer" i
 ## In greater detail: 
 
 ### **Problem** 
-    We have our questions about the software developer UK market:
-    1. How many SE jobs advertise salary?
-    2. What is the spread of salaries advertised for SE jobs on indeed.co.uk?
-    3. What are the main locations that SE appear in, other than London?
-    4. What are some of the most frequent words mentioned in the job title?
-    5. Which programming languages are in greatest demand?
-    6. What are the main topics emerging from the job descriptions and the title?
+We have our questions about the software developer UK market:
+1. How many SE jobs advertise salary?
+2. What is the spread of salaries advertised for SE jobs on indeed.co.uk?
+3. What are the main locations that SE appear in, other than London?
+4. What are some of the most frequent words mentioned in the job title?
+5. Which programming languages are in greatest demand?
+6. What are the main topics emerging from the job descriptions and the title?
 ### **Plan** 
-    Scrape data from Indeed.co.uk using BS4 and Selenium; Extract key info using regex; plot data using Seaborn; carry out statistical tests (Point Biserial Coef.); Use LDA to look for latent topics in job descriptions.
+Scrape data from Indeed.co.uk using BS4 and Selenium; Extract key info using regex; plot data using Seaborn; carry out statistical tests (Point Biserial Coef.); Use LDA to look for latent topics in job descriptions.
 ### **Data** 
-    Webscrapped job descriptions from Indeed.co.uk, searched for on the morning of 20th November, 2020. 500 Jobs originally stored. 2 were found to be unusable / duplicated. Thus I have 498 job descriptions, of which 243 state any kind of salary.
+Webscrapped job descriptions from Indeed.co.uk, searched for on the morning of 20th November, 2020. 500 Jobs originally stored. 2 were found to be unusable / duplicated. Thus I have 498 job descriptions, of which 243 state any kind of salary.
 ### **Analysis** 
 
 ![states_salary](https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/percent_jobs_state_salary.jpg)
