@@ -83,7 +83,7 @@ Fig 6 - top programming languages
     
     For topic modelling, detected a few emergent themes (see below and check the pyLDAviz html file).
 ### **Conclusion** 
-    What *can* we infer?
+    What *can* we conclude?
     
 
 
@@ -93,17 +93,17 @@ To check the topics yourself, copy the URL to the `LDA_viz_plot.html` file in th
 For a more in-depth explanation of how Latent Dirichlet Allocation works and how to interpret pyLDAviz fully, see [my previous article](https://towardsdatascience.com/latent-dirichlet-allocation-intuition-math-implementation-and-visualisation-63ccb616e094).
 
 #### Repo navigation:
-**index.ipynb** - principal notebook
-archive/
-    cleaning.ipynb - notebook to check the outputs of the scraping tool's results
-    unititled.ipynb - nb used to load and check extraneous data (e.g. ONS salary information for sector)
- clean_data/ - preprocessed data
- raw_data/data as immediately outputed after webscraping stage
- LDA_vis_plot.html - interactive visualisation of Latent Dirichlet Allocation.
- functions.py - scripted functions and classes stored here, including webscraping tool
- scrape_indeed_gui.py - script for running Job Scraper Tool (built using pySimpleGui)
- topic_mod.py - functions for topic modelling 
- fig/ - noteable visualisations saved here
+- **index.ipynb** - principal notebook
+- archive/
+-     cleaning.ipynb - notebook to check the outputs of the scraping tool's results
+-     unititled.ipynb - nb used to load and check extraneous data (e.g. ONS salary information for sector)
+-  clean_data/ - preprocessed data
+-  raw_data/data as immediately outputed after webscraping stage
+-  LDA_vis_plot.html - interactive visualisation of Latent Dirichlet Allocation.
+-  functions.py - scripted functions and classes stored here, including webscraping tool
+-  scrape_indeed_gui.py - script for running Job Scraper Tool (built using pySimpleGui)
+-  topic_mod.py - functions for topic modelling 
+-  fig/ - noteable visualisations saved here
  
 
 #### References:
