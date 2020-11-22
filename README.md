@@ -24,9 +24,9 @@ I scraped 498 job posts from Indeed.co.uk, searching for "software, developer" i
 * **Data** 
     Webscrapped job descriptions from Indeed.co.uk, searched for on the morning of 20th November, 2020. 500 Jobs originally stored. 2 were found to be unusable / duplicated. Thus I have 498 job descriptions, of which 243 state any kind of salary.
 * **Analysis** 
+
     ![states_salary](https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/percent_jobs_state_salary.jpg)
-    Fig 1
-    Barplots and boxplots illustrate salary distributions for London and non-London jobs. 
+    Fig 1 - how many jobs do state a salary?
     
     1. Just over half of SE jobs do **not** advertise salary openly. 
 
