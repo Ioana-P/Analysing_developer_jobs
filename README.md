@@ -22,10 +22,40 @@ I scraped 498 job posts from Indeed.co.uk, searching for "software, developer" i
 * **Plan** 
     Scrape data from Indeed.co.uk using BS4 and Selenium; Extract key info using regex; plot data using Seaborn; carry out statistical tests (Point Biserial Coef.); Use LDA to look for latent topics in job descriptions.
 * **Data** 
-    Webscrapped job descriptions from Indeed.co.uk, searched for on the morning of 20th November, 2020. 500 Jobs originally stored. 2 were found to be unusable / duplicated. Thus I have 498 job descriptions, of which 243 actually state salary.
+    Webscrapped job descriptions from Indeed.co.uk, searched for on the morning of 20th November, 2020. 500 Jobs originally stored. 2 were found to be unusable / duplicated. Thus I have 498 job descriptions, of which 243 state any kind of salary.
 * **Analysis** 
+    [states_salary](#https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/percent_jobs_state_salary.jpg)
+    Fig 1
     Barplots and boxplots illustrate salary distributions for London and non-London jobs. 
     
+    1. Just over half of SE jobs do **not** advertise salary openly. 
+
+    
+    [dist_all](#https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/distribution_annual.jpg)
+    Fig 2 - distribution of salaries across the board
+    
+    
+    [dist_ldn](#https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/distribution_annual_London.jpg)
+    Fig 3 - distribution of salaries for London
+    
+    2. The median job salary is £45k. The London median is 58K (mean of ~ 60k).
+    
+    [locations](#https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/top_10_locs.jpg)
+    Fig 4 - number of jobs by location
+
+    3. Twice as many posted jobs are non-London than based in the capital. These jobs are however extremely spread out amongst many different locations. Cambridge, Reading, Birmingham and Oxford are the following cities in terms of number of jobs posted.
+    
+    [title_ngrams](#https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/title_uni_and_bigrams.jpg)
+    Fig 5 -  terms and bigrams across job titles
+    
+    4. Less than 1 in 10 jobs are advertising with a programming language directly in their title (e.g. "Python developer"). About 10-20% of roles advertise with level of seniority directly in the title ("senior" vs "junior") and less than 10% directly require a university graduate (at least, going by title). 
+    
+    [prog_langs](#https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/programming_languages.jpg)
+    Fig 6 - top programming languages
+    
+    5. The 3 languages in greatest demand (both in terms of overall, total frequency - i.e. counting two mentions in one post as two - as single mentions) are JavaScript (and variants such as CoffeeScript and TypeScript), Python and Java. 
+
+    ### Was there any association between any of the top programming languages and salary?
     With an $\alpha$ of 0.05 (corrected to 0.01 for proposed number of statistical tests), I set out to test if mentions of certain programming languages correlated with salaries. Tested for outliers, normality and equal variance amongst subgroups. Calculated Point Biserial Coefficient. Failed to reject null hypothesis for any programming language group. 
     
     >Point Biserial Coefficient test results between the dichotomous (mention_Python) var and the continuous (salary) var :
@@ -40,21 +70,17 @@ I scraped 498 job posts from Indeed.co.uk, searching for "software, developer" i
     >P-value     :  0.07929926309719958
     >Correlation :  0.11938444648235219
 
-    
-    
-    For topic modelling, detected a few emergent themes (see below and check the pyLDAviz html file).
-* **Conclusion** 
-    Answering the questions above:
-
-1. Just over half of SE jobs do **not** advertise salary openly. 
-2. The median job salary is £45k. The London median is 58K (mean of ~ 60k).
-3. Twice as many posted jobs are non-London than based in the capital. These jobs are however extremely spread out amongst many different locations. Cambridge, Reading, Birmingham and Oxford are the following cities in terms of number of jobs posted.
-4. Less than 1 in 10 jobs are advertising with a programming language directly in their title (e.g. "Python developer"). About 10-20% of roles advertise with level of seniority directly in the title ("senior" vs "junior") and less than 10% directly require a university graduate (at least, going by title). 
-5. The 3 languages in greatest demand (both in terms of overall, total frequency - i.e. counting two mentions in one post as two - as single mentions) are JavaScript (and variants such as CoffeeScript and TypeScript), Python and Java. 
-6. Amongst the few emergent themes, there appear to be the following themes:
+    6. Amongst the few emergent themes, there appear to be the following themes:
     i. Academic / scientific posts - for devs working for research organisations such as Oxford Nanopores Technology or Siemens Digital Industries. 
     ii. Finance - SE roles focussed on building and optimising software for banks and for trading. Think London Stock Exchange (yes, one of their jobs is included here).
     iii. Architecture and computing - SE roles centred around computer architecture or cluster computing - think (Apache) Spark, arm, cluster computing. 
+  
+  
+    
+    For topic modelling, detected a few emergent themes (see below and check the pyLDAviz html file).
+* **Conclusion** 
+    What *can* we infer?
+    
 
 
 
