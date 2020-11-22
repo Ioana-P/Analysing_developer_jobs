@@ -47,11 +47,13 @@ Fig 4 - number of jobs by location
 3. Twice as many posted jobs are non-London than based in the capital. These jobs are however extremely spread out amongst many different locations. Cambridge, Reading, Birmingham and Oxford are the following cities in terms of number of jobs posted.
     
 ![title_ngrams](https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/title_uni_and_bigrams.jpg)
+
 Fig 5 -  terms and bigrams across job titles
 
 4. Less than 1 in 10 jobs are advertising with a programming language directly in their title (e.g. "Python developer"). About 10-20% of roles advertise with level of seniority directly in the title ("senior" vs "junior") and less than 10% directly require a university graduate (at least, going by title). 
     
 ![prog_langs](https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/programming_languages.jpg)
+
 Fig 6 - top programming languages
 
 5. The 3 languages in greatest demand (both in terms of overall, total frequency - i.e. counting two mentions in one post as two - as single mentions) are JavaScript (and variants such as CoffeeScript and TypeScript), Python and Java. 
@@ -104,4 +106,4 @@ Key Assumptions to bear in mind:
 * **National averages** - ONS data was filtered to retrieve data for 2019 as 2020 data is a. not fully available yet broken down by and b. 2020 survey data was affected by the Covid19 lockdown and the move to telephone polling. Although the 2019 mean salary is not a fair comparison for data retrieved in Q3 2020, it provides a rough benchmark against which we can compare our sample. 
 * **Data mining** - The salary extraction method is reliant on the pattern finding of text that "looks like salary data" - i.e. the python script that I wrote searched specifically for text that included "£" followed by any length of numbers (continuous or punctuated by a comma) and a time period phrase such as "per day", "per annum", "a year", etc. Spot-checking showed the method to be robust. Where a range was stated (e.g. "£40,000 - £50,000") the mean was taken. 
 * **Webscraping process** - The webscraping tool generally managed to retrieve the maximum of 19 jobs posted per page on Indeed's search result pages. The first part of the scraping had a human-in-the-loop (i.e. myself) monitoring the scraper navigating the page, to ensure data retrieval quality. Occasionally, due to an unforeseen pop-up or a nested html element, I had to scroll the automated Chrome browser in the right direction so that it would carry on retrieving new job post URLs. However, this means that some job posts may have been overlooked. This shouldn't pose a significant problem, since I was sampling from the much larger number of total available job posts, but the sampling method's randomness is reliant on the order in which Indeed presents results. 
-* **Searching by title** - 
+* **Searching by title** - since we're relying on Indeed.co.uk's internal search functions, I specifically chose to input the text "title:(software, developer)"- this would only bring up a job if it contained either or both of those 2 words in any order. This would allow as well for examples such as "Software & Architecture Developer" and other valid variations. I realise of course that this would exclude perfectly valid choices from our selection, but I decided to prioritise sample purity foremost.
