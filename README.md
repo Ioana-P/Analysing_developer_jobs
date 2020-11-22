@@ -92,9 +92,21 @@ To check the topics yourself, copy the URL to the `LDA_viz_plot.html` file in th
 
 For a more in-depth explanation of how Latent Dirichlet Allocation works and how to interpret pyLDAviz fully, see [my previous article](https://towardsdatascience.com/latent-dirichlet-allocation-intuition-math-implementation-and-visualisation-63ccb616e094).
 
+#### Repo navigation:
+**index.ipynb** - principal notebook
+archive/
+    cleaning.ipynb - notebook to check the outputs of the scraping tool's results
+    unititled.ipynb - nb used to load and check extraneous data (e.g. ONS salary information for sector)
+ clean_data/ - preprocessed data
+ raw_data/data as immediately outputed after webscraping stage
+ LDA_vis_plot.html - interactive visualisation of Latent Dirichlet Allocation.
+ functions.py - scripted functions and classes stored here, including webscraping tool
+ scrape_indeed_gui.py - script for running Job Scraper Tool (built using pySimpleGui)
+ topic_mod.py - functions for topic modelling 
+ fig/ - noteable visualisations saved here
+ 
 
-
-References:
+#### References:
 
 * ONS Sector Data - https://www.ons.gov.uk/filters/c60ed96a-df5b-4dbe-bbda-ab407c9639d6/dimensions 
 * SlashData Report - 'State of the Developer Nation 19th Edition' - https://slashdata-website-cms.s3.amazonaws.com/sample_reports/y7fzAZ8e5XuKCL1Q.pdf 
@@ -102,7 +114,7 @@ References:
 * Point Biserial Correlation with Python - https://towardsdatascience.com/point-biserial-correlation-with-python-f7cd591bd3b1
 
 
-Key Assumptions to bear in mind:
+#### Key Assumptions to bear in mind:
 * **Data sourcing** - Data was sourced purely from Indeed.co.uk over a limited time span. The individual time of scraping is recorded for each job post inside the raw_data file raw_data/SE_jobs_20_11_2020.csv. Further sampling over time will be needed to replicate or falsify findings.
 * **National averages** - ONS data was filtered to retrieve data for 2019 as 2020 data is a. not fully available yet broken down by and b. 2020 survey data was affected by the Covid19 lockdown and the move to telephone polling. Although the 2019 mean salary is not a fair comparison for data retrieved in Q3 2020, it provides a rough benchmark against which we can compare our sample. 
 * **Data mining** - The salary extraction method is reliant on the pattern finding of text that "looks like salary data" - i.e. the python script that I wrote searched specifically for text that included "£" followed by any length of numbers (continuous or punctuated by a comma) and a time period phrase such as "per day", "per annum", "a year", etc. Spot-checking showed the method to be robust. Where a range was stated (e.g. "£40,000 - £50,000") the mean was taken. 
