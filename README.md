@@ -42,6 +42,7 @@ Fig 3 - distribution of salaries for London
 2. The median job salary is £45k. The London median is 58K (mean of ~ 60k).
 
 ![locations](https://github.com/Ioana-P/Analysing_developer_jobs/blob/master/fig/top_10_locs.jpg)
+
 Fig 4 - number of jobs by location
 
 3. Twice as many posted jobs are non-London than based in the capital. These jobs are however extremely spread out amongst many different locations. Cambridge, Reading, Birmingham and Oxford are the following cities in terms of number of jobs posted.
