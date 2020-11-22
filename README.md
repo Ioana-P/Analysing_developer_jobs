@@ -3,7 +3,7 @@
 I scraped 498 job posts from Indeed.co.uk, searching for "software, developer" in the title, and then analysed the data. 
 ### **TL;DR**
 ###### If you take my word for it, here's what I found: 
-1. JavaScript (and its variants), Python and Java were the most popular languages mentioned.
+1. JavaScript (including its variants), Python and Java were the most popular languages mentioned.
 2. Most jobs are concentrated in London, predictably, with the next most popular location being the emerging mini tech-hub of Cambridge. 
 3. There is no significant reason to believe that job posts mentioning a particular programming language will be higher or lower paid (at least as far as this sample can tell).
 4. There are some small, emerging sub-groups of SE jobs that stick out from the group due to nature of the hiring company's work: e.g. software development for bioinformatics and other academic research (centred more in Oxford & Cambridge); SE roles that facilitate finance work and trading, which centre around London.
