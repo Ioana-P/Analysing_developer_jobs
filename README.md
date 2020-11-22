@@ -63,16 +63,16 @@ Fig 6 - top programming languages
     With an $\alpha$ of 0.05 (corrected to 0.01 for proposed number of statistical tests), I set out to test if mentions of certain programming languages correlated with salaries. Tested for outliers, normality and equal variance amongst subgroups. Calculated Point Biserial Coefficient. Failed to reject null hypothesis for any programming language group. 
     
     >Point Biserial Coefficient test results between the dichotomous (mention_Python) var and the continuous (salary) var :
-    >P-value     :  0.8696801700715007
-    >Correlation :  -0.011201789743642679
+    >P-value     :  0.8696
+    >Correlation :  -0.0112
 
     >Point Biserial Coefficient test results between the dichotomous (mention_Java) var and the continuous (salary) var :
-    >P-value     :  0.4490789588152162
-    >Correlation :  0.051649212912551756
+    >P-value     :  0.4490
+    >Correlation :  0.0516
 
     >Point Biserial Coefficient test results between the dichotomous (mention_JavaScript (or variants)) var and the continuous (salary) var :
-    >P-value     :  0.07929926309719958
-    >Correlation :  0.11938444648235219
+    >P-value     :  0.0792
+    >Correlation :  0.1193
 
     6. Amongst the few emergent themes, there appear to be the following themes:
     i. Academic / scientific posts - for devs working for research organisations such as Oxford Nanopores Technology or Siemens Digital Industries. 
