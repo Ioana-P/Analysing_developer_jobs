@@ -507,19 +507,57 @@ def get_lang_count(text, lang_string):
         matches = regexp.findall(text)
     return len(matches)
 
-def get_lang_count_and_store(data, lang_string_lst):
+def get_lang_count_and_store(data, lang_string_lst, columns = None):
     df = data.copy()
+    if columns == None:
+        columns ='job_descr'
     
-    for lang in lang_string_lst:
-        df['num_mention_{}'.format(lang)] = df.job_descr.apply(lambda x : get_lang_count(x, lang))  
-    df['num_mention_Shell scripting languages'] = df['num_mention_Shell'] + df['num_mention_Shell script'] + df['num_mention_Shell scripting'] + df['num_mention_shell'] + df['num_mention_shell script'] + df['num_mention_shell scripting'] + df['num_mention_Bash']+ df['num_mention_bash']
-    
-    df.drop(columns = ['num_mention_{}'.format(x) for x in ['Shell', 'Shell script', 'Shell scripting','shell', 'shell script', 'shell scripting', 'Bash', 'bash']], inplace=True)
-    
-    
-    df['num_mention_JavaScript (total)'] =  df['num_mention_Javascript']+df['num_mention_JavaScript']+ df['num_mention_TypeScript']+ df['num_mention_CoffeeScript']
-    df.drop(columns = ['num_mention_{}'.format(x) for x in ['Javascript','JavaScript', 'TypeScript', 'CoffeeScript']], inplace=True)
-   
+    if type(columns)!=list:
+        col = columns
+        for lang in lang_string_lst:
+
+            if type(lang)==list:
+                prime_lang = lang[0]
+                df['num_mention_{}_{}'.format(col, prime_lang)] = df[col].apply(lambda x : get_lang_count(x, prime_lang))  
+                for lang_variant in lang[1:]:
+                    df['num_mention_{}_{}'.format(col, lang_variant)] = df[col].apply(lambda x : get_lang_count(x, prime_lang))
+                    df['num_mention_{}_{}'.format(col, prime_lang)] = df['num_mention_{}_{}'.format(col, prime_lang)] + df['num_mention_{}_{}'.format(col, lang_variant)]
+                    df.drop(columns=['num_mention_{}_{}'.format(col, lang_variant)], inplace=True)
+
+            else:        
+                df['num_mention_{}_{}'.format(col, lang)] = df[col].apply(lambda x : get_lang_count(x, lang))  
+        
+    else:
+        for col in columns:
+            
+            for lang in lang_string_lst:
+
+                if type(lang)==list:
+                    prime_lang = lang[0]
+                    df['num_mention_{}_{}'.format(col, prime_lang)] = df[col].apply(lambda x : get_lang_count(x, prime_lang))  
+                    for lang_variant in lang[1:]:
+                        df['num_mention_{}_{}'.format(col, lang_variant)] = df[col].apply(lambda x : get_lang_count(x, prime_lang))
+                        df['num_mention_{}_{}'.format(col, prime_lang)] = df['num_mention_{}_{}'.format(col, prime_lang)] + df['num_mention_{}_{}'.format(col, lang_variant)]
+                        df.drop(columns=['num_mention_{}_{}'.format(col, lang_variant)], inplace=True)
+
+                else:        
+                    df['num_mention_{}_{}'.format(col, lang)] = df[col].apply(lambda x : get_lang_count(x, lang))  
+        for lang in lang_string_lst:
+            if type(lang)==list:
+                cur_lang = lang[0]
+            else:
+                cur_lang = lang
+            
+            n_langs = len(lang_string_lst)
+            n_cols = len(columns)
+            df['num_mention_TOTAL_{}'.format(cur_lang)] = 0
+            for col in columns:
+                df['num_mention_TOTAL_{}'.format(cur_lang)] = df['num_mention_TOTAL_{}'.format(cur_lang)] + df['num_mention_{}_{}'.format(col, cur_lang)] 
+#                 df.drop(columns = ['num_mention_{}_{}'.format(col, cur_lang)], axis=1, inplace=True)
+                
+#           
+            df.drop(columns=['num_mention_{}_{}'.format(x, cur_lang) for x in columns], axis=1, inplace=True)
+
     return df
 
     

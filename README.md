@@ -57,27 +57,23 @@ Fig 5 -  terms and bigrams across job titles
 
 Fig 6 - top programming languages
 
-5. The 3 languages in greatest demand (both in terms of overall, total frequency - i.e. counting two mentions in one post as two - as single mentions) are JavaScript (and variants such as CoffeeScript and TypeScript), Python and Java. 
+5. The 3 languages in greatest demand (both in terms of overall, total frequency - i.e. counting two mentions in one post as two - as single mentions) are JavaScript (and variants such as CoffeeScript and TypeScript), Python,  Java, PHP and SQL. 
 
     ### Was there any association between any of the top programming languages and salary?
     With an $\alpha$ of 0.05 (corrected to 0.01 for proposed number of statistical tests), I set out to test if mentions of certain programming languages correlated with salaries. Tested for outliers, normality and equal variance amongst subgroups. Calculated Point Biserial Coefficient. Failed to reject null hypothesis for any programming language group. 
     
-    >Point Biserial Coefficient test results between the dichotomous (mention_Python) var and the continuous (salary) var :
-    >P-value     :  0.8696
-    >Correlation :  -0.0112
+>Point Biserial Coefficient test results between the dichotomous (mention_Python) var and the continuous (salary) var :
+>P-value     :  0.8696801700715007
+>Correlation :  -0.011201789743642679
 
-    >Point Biserial Coefficient test results between the dichotomous (mention_Java) var and the continuous (salary) var :
-    >P-value     :  0.4490
-    >Correlation :  0.0516
+>Point Biserial Coefficient test results between the dichotomous (mention_Java) var and the continuous (salary) var :
+>P-value     :  0.4490789588152162
+>Correlation :  0.051649212912551756
 
-    >Point Biserial Coefficient test results between the dichotomous (mention_JavaScript (or variants)) var and the continuous (salary) var :
-    >P-value     :  0.0792
-    >Correlation :  0.1193
-
-    6. Amongst the few emergent themes, there appear to be the following themes:
-    i. Academic / scientific posts - for devs working for research organisations such as Oxford Nanopores Technology or Siemens Digital Industries. 
-    ii. Finance - SE roles focussed on building and optimising software for banks and for trading. Think London Stock Exchange (yes, one of their jobs is included here).
-    iii. Architecture and computing - SE roles centred around computer architecture or cluster computing - think (Apache) Spark, arm, cluster computing. 
+6. Amongst the few emergent themes, there appear to be the following themes:
+i. Academic / scientific posts - for devs working for research organisations such as Oxford Nanopores Technology or Siemens Digital Industries. 
+ii. Finance - SE roles focussed on building and optimising software for banks and for trading. Think London Stock Exchange (yes, one of their jobs is included here).
+iii. Architecture and computing - SE roles centred around computer architecture or cluster computing - think (Apache) Spark, arm, cluster computing. 
   
   
     
