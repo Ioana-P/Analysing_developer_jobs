@@ -57,7 +57,7 @@ Fig 5 -  terms and bigrams across job titles
 
 Fig 6 - top programming languages
 
-5. The 3 languages in greatest demand (both in terms of overall, total frequency - i.e. counting two mentions in one post as two - as single mentions) are JavaScript (and variants such as CoffeeScript and TypeScript), Python,  Java, PHP and SQL. 
+5. The 5 languages in greatest demand (both in terms of overall frequency and as number of posts mentioning them at least once) are Python, Java, PHP, SQL and JavaScript (including variants such as CoffeeScript and TypeScript). 
 
     ### Was there any association between any of the top programming languages and salary?
     With an $\alpha$ of 0.05 (corrected to 0.01 for proposed number of statistical tests), I set out to test if mentions of certain programming languages correlated with salaries. Tested for outliers, normality and equal variance amongst subgroups. Calculated Point Biserial Coefficient. Failed to reject null hypothesis for any programming language group. 
